@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">AndroidStateManagement</string>
     <string name="action_settings">Settings</string>
+    <string name="enter_your_name">Enter Name</string>
+    <string name="register_btn_label">Register</string>
+    <string name="enter_your_email">Enter email</string>
+    <string name="enter_your_password">Enter Password</string>
 </resources>

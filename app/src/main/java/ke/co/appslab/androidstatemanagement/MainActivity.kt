@@ -5,6 +5,7 @@ import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import ke.co.appslab.androidstatemanagement.datastates.Result
 
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
                 .setAction("Action", null).show()
         }
     }
+
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
