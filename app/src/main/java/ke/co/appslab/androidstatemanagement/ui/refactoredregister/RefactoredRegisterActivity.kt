@@ -41,6 +41,24 @@ class RefactoredRegisterActivity : AppCompatActivity() {
         }
     }
 
+    private fun handleRegisterResult(result: RegisterResult){
+        when(result){
+            is RegisterResult.Success -> {
+                saveUserDetails(result.data)
+                proceedToDashBoard()
+            }
+            is RegisterResult.HttpErrors.Unauthorized -> showError(result.exception)
+            is RegisterResult.HttpErrors.ResourceForbidden -> showError(result.exception)
+            is RegisterResult.HttpErrors.ResourceNotFound -> showError(result.exception)
+            is RegisterResult.HttpErrors.InternalServerError -> showError(result.exception)
+            is RegisterResult.HttpErrors.BadGateWay -> showError(result.exception)
+            is RegisterResult.HttpErrors.RemovedResourceFound -> showError(result.exception)
+            is RegisterResult.NetworkException -> showError(result.error)
+            is RegisterResult.Error -> showError(result.error)
+
+        }
+    }
+
     private fun showError(s: String) {
 
     }
