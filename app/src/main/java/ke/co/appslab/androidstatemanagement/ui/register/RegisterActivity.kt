@@ -32,7 +32,7 @@ class RegisterActivity : AppCompatActivity() {
                     502 -> showError("Bad Gateway")
                     301 -> showError("Resource has been removed permanently")
                     302 -> showError("Resource moved,but has has been found ")
-                    else -> showError("All cases have not been")
+                    else -> showError("All cases have not been covered!!")
 
                 }
             }
